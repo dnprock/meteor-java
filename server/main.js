@@ -1,5 +1,10 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+
+  var java = require('java');
+  var javaLangSystem = java.import('java.lang.System');
+
+  javaLangSystem.out.printlnSync('Hello World');
+
 });
